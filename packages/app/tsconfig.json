@@ -1,7 +1,11 @@
 {
-  "extends": "../../tsconfig.json", 
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -13,17 +17,36 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@shared/*": ["../shared/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@shared/*": [
+        "../shared/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook/__mock__/session.mock.ts", "src/components/organisms/PublishCoursForm/PromotionsForm.tsx"],
-  "exclude": ["node_modules", "**/*.stories.ts", "**/*.stories.tsx"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".storybook/__mock__/session.mock.ts",
+    "build/types/**/*.ts",
+    "next-env.d.ts",
+    "src/components/organisms/PublishCoursForm/PromotionsForm.tsx.back",
+    "/build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.stories.ts",
+    "**/*.stories.tsx"
+  ]
 }
